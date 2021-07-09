@@ -1,0 +1,28 @@
+﻿@page
+@model AspnetCRUDSupplier.Pages.Suppliers.IndexModel
+@{
+}
+
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Namn</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var supplier in Model.Items)
+    {
+        <partial name="_RenderSupplier" model="@supplier" />
+    }
+    </tbody>
+    <tfooter>
+        <tr>
+            <td colspan="2">
+                <a asp-page="New" class="getstarted">New</a>
+            </td>
+        </tr>
+    </tfooter>
+</table>
